@@ -1,0 +1,1064 @@
+/* ----------------------
+   Global Styles
+----------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* ----------------------
+   Navbar
+----------------------- */
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  padding: 8px 12px;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background: #ff6600;
+  color: #fff;
+}
+
+/* ----------------------
+   Hero Section
+----------------------- */
+.hero {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); /* overlay */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: white;
+  color: #ff6600;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* ----------------------
+   Sections
+----------------------- */
+section {
+  padding: 60px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* ----------------------
+   Grid & Cards
+----------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* ----------------------
+   Portfolio
+----------------------- */
+.portfolio-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-item p {
+  padding: 15px;
+  font-weight: 600;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ----------------------
+   Testimonials
+----------------------- */
+.testimonials .card {
+  padding: 25px;
+  text-align: left;
+}
+
+.testimonials img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonials p {
+  font-style: italic;
+  color: #444;
+}
+
+.testimonials h4 {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+/* ----------------------
+   Footer
+----------------------- */
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ----------------------
+   Responsive
+----------------------- */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+}
+/* ----------------------
+   About Page
+----------------------- */
+
+/* About Company */
+.about-company {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.about-company h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-company p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Mission & Vision */
+.mission-vision .card {
+  text-align: center;
+  padding: 30px;
+}
+
+.mission-vision h2 {
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+/* Team Section */
+.team h2 {
+  margin-bottom: 40px;
+}
+
+.team .card {
+  text-align: center;
+  padding: 20px;
+}
+
+.team .card img {
+  border: 5px solid #eee;
+  transition: 0.3s;
+}
+
+.team .card img:hover {
+  border-color: #ff6600;
+  transform: scale(1.05);
+}
+
+.team h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.team p {
+  color: #777;
+  font-size: 0.95rem;
+}
+/* ----------------------
+   Page Hero (for Services, Portfolio etc.)
+----------------------- */
+.page-hero {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); /* dark overlay */
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.page-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ----------------------
+   Services Section
+----------------------- */
+.services h2 {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.services .card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.services .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.services .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.services .card h3 {
+  margin: 15px 0 10px 0;
+  color: #ff6600;
+}
+
+.services .card p {
+  padding: 0 15px 15px 15px;
+  color: #555;
+  font-size: 0.95rem;
+}
+/* ----------------------
+   Portfolio Page
+----------------------- */
+
+.portfolio-preview .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.portfolio-item p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 12px 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-item:hover p {
+  background: rgba(255, 102, 0, 0.8); /* orange overlay on hover */
+}
+/* ----------------------
+   Contact Page
+----------------------- */
+
+.contact-form .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #ff6600;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button.btn {
+  width: 150px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.contact-info strong {
+  color: #333;
+}
+/* ----------------------
+   Service Detail Pages
+----------------------- */
+
+/* Service Details Section */
+.service-details {
+  padding: 60px 0;
+}
+
+.service-details h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.service-details p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* Features List */
+.service-details ul {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.service-details ul li {
+  margin-bottom: 10px;
+}
+
+/* Related Projects Grid */
+.service-details .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-details .portfolio-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-details .portfolio-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.service-details .portfolio-item p {
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.service-details .portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.service-details .portfolio-item:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .service-details h2 {
+    font-size: 1.8rem;
+  }
+
+  .service-details p {
+    font-size: 1rem;
+  }
+
+  .service-details ul {
+    font-size: 0.95rem;
+  }
+}
+/* ----------------------
+   Mobile App Development Enhancements
+----------------------- */
+
+/* Hero Section - slightly larger heading for Mobile App pages */
+.page-hero h1 {
+  font-size: 3rem;
+}
+
+.page-hero p {
+  font-size: 1.3rem;
+}
+
+/* Features List - orange bullet */
+.service-details ul li::marker {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Portfolio Item Spacing */
+.service-details .grid {
+  gap: 30px; /* slightly more spacing for mobile app projects */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+}
+/* ----------------------
+   UI/UX Design Page Enhancements
+----------------------- */
+
+/* Hero Section - slightly larger for UI/UX design */
+.page-hero h1 {
+  font-size: 3rem;
+}
+
+.page-hero p {
+  font-size: 1.3rem;
+}
+
+/* Features List - orange bullets for UI/UX */
+.service-details ul li::marker {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Portfolio Item Hover */
+.service-details .portfolio-item:hover img {
+  transform: scale(1.06);
+}
+
+.service-details .portfolio-item:hover p {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+}
+/* ----------------------
+   E-commerce Solutions Page Enhancements
+----------------------- */
+
+/* Hero Section - emphasize E-commerce */
+.page-hero h1 {
+  font-size: 3rem;
+}
+
+.page-hero p {
+  font-size: 1.3rem;
+}
+
+/* Features List - orange bullets */
+.service-details ul li::marker {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Portfolio Item Hover */
+.service-details .portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.service-details .portfolio-item:hover p {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+}
+/* ----------------------
+   SEO & Digital Marketing Page Enhancements
+----------------------- */
+
+/* Hero Section - emphasize SEO & Marketing */
+.page-hero h1 {
+  font-size: 3rem;
+}
+
+.page-hero p {
+  font-size: 1.3rem;
+}
+
+/* Features List - orange bullets */
+.service-details ul li::marker {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Portfolio Item Hover */
+.service-details .portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.service-details .portfolio-item:hover p {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+}
+/* ----------------------
+   Maintenance & Support Page Enhancements
+----------------------- */
+
+/* Hero Section - emphasize Maintenance & Support */
+.page-hero h1 {
+  font-size: 3rem;
+}
+
+.page-hero p {
+  font-size: 1.3rem;
+}
+
+/* Features List - orange bullets */
+.service-details ul li::marker {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Portfolio Item Hover */
+.service-details .portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.service-details .portfolio-item:hover p {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+}
+/* ----------------------
+   Portfolio Detail Pages
+----------------------- */
+
+/* Hero Section */
+.page-hero h1 {
+  font-size: 3rem;
+}
+
+.page-hero p {
+  font-size: 1.3rem;
+}
+
+/* Section Headings */
+.service-details h2,
+.service-details h3 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Paragraphs */
+.service-details p {
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Lists - Features & Technologies */
+.service-details ul {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.service-details ul li {
+  margin-bottom: 10px;
+}
+
+.service-details ul li::marker {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Project Gallery Grid */
+.service-details .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-details .portfolio-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-details .portfolio-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.service-details .portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.service-details .portfolio-item:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .service-details ul {
+    font-size: 0.95rem;
+  }
+}
+/* ----------------------
+   E-commerce Portfolio Page
+----------------------- */
+
+/* Hero Section */
+.page-hero h1 {
+  font-size: 3rem;
+}
+
+.page-hero p {
+  font-size: 1.3rem;
+}
+
+/* Features & Technologies List - orange bullets */
+.service-details ul li::marker {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Portfolio Item Hover Effects */
+.service-details .portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.service-details .portfolio-item:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .service-details ul {
+    font-size: 0.95rem;
+  }
+}
+/* ----------------------
+   Mobile App Portfolio Page
+----------------------- */
+
+/* Hero Section */
+.page-hero h1 {
+  font-size: 3rem;
+}
+
+.page-hero p {
+  font-size: 1.3rem;
+}
+
+/* Features & Technologies List - orange bullets */
+.service-details ul li::marker {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Portfolio Item Hover Effects */
+.service-details .portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.service-details .portfolio-item:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .service-details ul {
+    font-size: 0.95rem;
+  }
+}
+/* ----------------------
+   Branding & Design Portfolio Page
+----------------------- */
+
+/* Hero Section */
+.page-hero h1 {
+  font-size: 3rem;
+}
+
+.page-hero p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Features & Technologies List - orange bullets */
+.service-details ul li::marker {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Portfolio Item Hover Effects */
+.service-details .portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.service-details .portfolio-item:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .service-details ul {
+    font-size: 0.95rem;
+  }
+}
+/* ----------------------
+   Auth Pages (Login & Register)
+----------------------- */
+
+.auth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: #f9f9f9;
+  min-height: 80vh;
+}
+
+.auth-box {
+  background: #fff;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.auth-box .btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.auth-box p {
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.auth-box p a {
+  color: #ff6600;
+  font-weight: 600;
+}
